@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="1100.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="alumnos.controlador.FXMLHorarioEEController">
+  <children>
+    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2164ff09" height="600.0" layoutX="0.0" layoutY="0.0" stroke="#000000ea" strokeType="INSIDE" width="1100.0" />
+    <Rectangle arcHeight="5.0" arcWidth="5.0" height="50.0" layoutX="0.0" layoutY="68.0" stroke="BLACK" strokeType="INSIDE" width="1100.0">
+      <fill>
+        <Color blue="0.616" green="0.322" red="0.094" fx:id="x3" />
+      </fill>
+    </Rectangle>
+    <ImageView fitHeight="100.0" fitWidth="150.0" layoutX="14.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@../iconos/logo%20uv.png" />
+      </image>
+    </ImageView>
+    <Label layoutX="330.0" layoutY="67.0" text="Control de horario" textFill="#fffbfb">
+      <font>
+        <Font name="Berlin Sans FB" size="48.0" />
+      </font>
+    </Label>
+    <Button id="buttonSalir" layoutX="982.0" layoutY="74.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="104.0" text="Salir">
+      <font>
+        <Font size="18.0" />
+      </font>
+    </Button>
+    <TableView id="tableviewTabla" fx:id="tvExperienciaEducativa" layoutX="14.0" layoutY="188.0" prefHeight="300.0" prefWidth="274.0" tableMenuButtonVisible="false" visible="true">
+      <columns>
+        <TableColumn id="tablecolumnMatricula" maxWidth="5000.0" minWidth="10.0" prefWidth="94.0" text="NRC" fx:id="tcNRC" />
+        <TableColumn id="tablecolumnNombre" maxWidth="5000.0" minWidth="10.0" prefWidth="195.0" text="Nombre E.E." fx:id="tcNombreEE" />
+      </columns>
+    </TableView>
+    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffc31fd3" height="300.0" layoutX="908.0" layoutY="184.0" stroke="BLACK" strokeType="INSIDE" width="143.0" />
+    <Label layoutX="916.0" layoutY="201.0" text="NRC">
+      <font>
+        <Font name="Berlin Sans FB" size="18.0" fx:id="x1" />
+      </font>
+    </Label>
+    <Label font="$x1" layoutX="916.0" layoutY="265.0" text="Salón" />
+    <Label font="$x1" layoutX="914.0" layoutY="314.0" text="Hora inicio" />
+    <Label font="$x1" layoutX="916.0" layoutY="375.0" text="Hora fin" />
+    <Label id="tfDia" font="$x1" layoutX="913.0" layoutY="430.0" text="Día" />
+    <TextField id="textfieldMatricula" fx:id="tfNRCHorario" layoutX="916.0" layoutY="233.0" prefWidth="115.0" />
+    <TextField id="textfieldNombre" fx:id="tfSalon" layoutX="916.0" layoutY="285.0" prefWidth="115.0" />
+    <TextField id="textfieldPaterno" fx:id="tfHoraInicio" layoutX="915.0" layoutY="342.0" prefWidth="115.0" />
+    <TextField id="textfieldMaterno" fx:id="tfHoraFin" layoutX="915.0" layoutY="395.0" prefWidth="115.0" />
+    <TextField id="textfieldMaterno" fx:id="tfDia" layoutX="916.0" layoutY="450.0" prefWidth="115.0" />
+    <Button id="buttonAgregar" fx:id="buttonAgregarH" layoutX="716.0" layoutY="521.0" mnemonicParsing="false" onAction="#agregarH" text="Agregar" />
+    <Button id="buttonEliminar" fx:id="buttonEliminarH" disable="true" layoutX="511.0" layoutY="521.0" mnemonicParsing="false" onAction="#eliminarH" text="Eliminar" />
+    <Button id="buttonLimpiar" fx:id="buttonLimpiarH" layoutX="950.0" layoutY="521.0" mnemonicParsing="false" onAction="#limpiarH" text="Limpiar" />
+    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#18529d" height="25.0" layoutX="0.0" layoutY="575.0" stroke="BLACK" strokeType="INSIDE" width="1100.0" />
+    <Rectangle arcHeight="5.0" arcWidth="5.0" height="15.0" layoutX="0.0" layoutY="552.0" stroke="$x2" strokeType="INSIDE" width="1100.0">
+      <fill>
+        <Color blue="0.337" green="0.678" red="0.157" fx:id="x2" />
+      </fill>
+    </Rectangle>
+    <TableView id="tableviewTabla" fx:id="tvHorarioEE" layoutX="330.0" layoutY="188.0" prefHeight="300.0" prefWidth="494.0">
+      <columns>
+        <TableColumn id="tablecolumnMatricula" maxWidth="5000.0" minWidth="10.0" prefWidth="106.0" text="NRC" fx:id="tcNRCHorario" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="118.0" text="Día" fx:id="tcDia" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="80.0" text="Hora inicio" fx:id="tcHoraInicio" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="80.0" text="Hora fin" fx:id="tcHoraFin" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="109.0" text="Salón" fx:id="tcSalon" />
+      </columns>
+    </TableView>
+    <Label layoutX="53.0" layoutY="158.0" text="Experiencias Educativas" textFill="$x3" underline="true">
+      <font>
+        <Font name="Berlin Sans FB" size="20.0" fx:id="x4" />
+      </font>
+    </Label>
+    <Label font="$x4" layoutX="411.0" layoutY="158.0" text="Horario de Ingeniería de Software" textFill="$x3" underline="true" />
+    <Label font="$x4" layoutX="907.0" layoutY="158.0" text="Datos del horario" textFill="$x3" underline="true" />
+  </children>
+</AnchorPane>
